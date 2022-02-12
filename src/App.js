@@ -35,7 +35,7 @@ function App() {
       <h2>My Expense Tracker!</h2>
       <ExpenseMain items={expenses} />
     </div>
-    
+
   );
 }
 
