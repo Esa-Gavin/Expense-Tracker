@@ -6,10 +6,10 @@ function ExpenseDate(props) {
     const date = props.tarehe.getFullYear();
 
     return (
-        <div>
-            <div>{mwezi}</div>
-            <div>{mwaka}</div>
-            <div>{date}</div>
+        <div className='expense-date'>
+            <div className='expense-date__month'>{mwezi}</div>
+            <div className='expense-date__year'>{mwaka}</div>
+            <div className='expense-date__day'>{date}</div>
         </div>
     )
 }
