@@ -6,7 +6,7 @@ import Card from '../UI/Card';
 
 function ExpenseItem(props) { // the word props can be set to any other name //
     let title = props.kichwa;
-    useState()
+    const [kichwa, setKichwa] = useState(props.kichwa);
     
     const clickHandler = () => {
         title = "Updated!";
