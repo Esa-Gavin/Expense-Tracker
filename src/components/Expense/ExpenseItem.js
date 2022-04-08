@@ -1,16 +1,25 @@
+import React, { useState } from 'react';
+
 import './ExpenseItem.css';
 import ExpenseDate from './ExpenseDate';
 import Card from '../UI/Card';
 
 function ExpenseItem(props) { // the word props can be set to any other name //
+    let title = props.kichwa;
+    useState()
+    
+    const clickHandler = () => {
+        title = "Updated!";
+    }
+    
     return (
         <Card className='expense-item'>
             <ExpenseDate tarehe={props.tarehe} />
             <div className='expense-item__description'>
-                <h2>{props.kichwa}</h2>
+                <h2>{title}</h2>
                 <div className='expense-item__price'>${props.bei}</div>
             </div>
-            <buttton>Change the Title!</buttton>
+            <buttton onClick={clickHandler}>Change Title!</buttton>
         </Card>
     );
 }
