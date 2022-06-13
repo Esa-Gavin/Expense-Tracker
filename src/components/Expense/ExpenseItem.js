@@ -19,7 +19,7 @@ function ExpenseItem(props) { // the word props can be set to any other name //
                 <h2>{title}</h2>
                 <div className='expense-item__price'>${props.bei}</div>
             </div>
-            <buttton onClick={clickHandler}>Change Title!</buttton>
+            <buttton onClick={clickHandler}>Change Title!!</buttton>
         </Card>
     );
 }
