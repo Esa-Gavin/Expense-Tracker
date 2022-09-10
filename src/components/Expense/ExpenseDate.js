@@ -1,6 +1,6 @@
 import './ExpenseDate.css';
 
-function ExpenseDate(props) {
+const ExpenseDate = (props) => {
     const mwezi = props.tarehe.toLocaleString('en-US', { month: 'long' });
     const mwaka = props.tarehe.toLocaleString('en-US', { day: '2-digit' });
     const day = props.tarehe.getFullYear();
