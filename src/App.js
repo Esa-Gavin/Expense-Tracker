@@ -32,7 +32,7 @@ const App = () => {
   ];
   return (
     <div>
-      <h2>My Expense Tracker!</h2>
+      <h1>My Expense Tracker!</h1>
       <ExpenseMain items={expenses} />
     </div>
 
