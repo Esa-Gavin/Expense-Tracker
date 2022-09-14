@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import './ExpenseForm.css';
 
-const ExpenseForm = () => {
+const ExpenseForm = (props) => {
     // enteredTitle represents the function for the input the user entered //
     // setEnteredTitle represents the function for updating the state //
     // '' here is where we store an empty string and for every value, it is usually stored as a string //
@@ -30,7 +30,7 @@ const ExpenseForm = () => {
             amount: enteredAmount,
             date: new Date(enteredDate)
         };
-        console.log(expenseData);
+        props.onSaveExpenseData(expenseData);
 
         setEnteredTitle(''); // we do this so as to return the value back to an empty string, thus two way binding has been achieved //
         setEnteredAmount('');
