@@ -3,8 +3,10 @@ import React, { useState } from 'react';
 import './ExpenseForm.css';
 
 const ExpenseForm = () => {
-
-    const [enteredTitle, setEnteredTitle] = useState('');
+    // enteredTitle represents the function for the input the user entered //
+    // setEnteredTitle represents the function for updating the state //
+    // '' here is where we store an empty string and for every value, it is usually stored as a string //
+    const [enteredTitle, setEnteredTitle] = useState(''); 
     const [enteredAmount, setEnteredAmount] = useState('');
     const [enteredDate, setEnteredDate] = useState('');
 
