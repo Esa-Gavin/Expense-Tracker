@@ -36,6 +36,9 @@ const DUMMY_EXPENSES = [
 
 const App = () => {
 
+  // don't forget that expenses represents the current state (DUMMY_EXPENSES) //
+  // while the setExpenses represents the function to update the state //
+
   const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
 
   const addExpenseHandler = (expense) => {
