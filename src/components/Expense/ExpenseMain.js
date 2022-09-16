@@ -24,11 +24,9 @@ const ExpenseMain = (props) => {
         <div>
 
             <Card className='expenses'>
-                <ExpensesFilter selected={filteredYear}  onSaveSelectChangeHandler={saveSelectChangeHandler} />
-                <ExpenseItem kichwa={props.items[0].title} bei={props.items[0].amount} tarehe={props.items[0].date} />
-                <ExpenseItem kichwa={props.items[1].title} bei={props.items[1].amount} tarehe={props.items[1].date} />
-                <ExpenseItem kichwa={props.items[2].title} bei={props.items[2].amount} tarehe={props.items[2].date} />
-                <ExpenseItem kichwa={props.items[3].title} bei={props.items[3].amount} tarehe={props.items[3].date} />
+                <ExpensesFilter selected={filteredYear} onSaveSelectChangeHandler={saveSelectChangeHandler} />
+                {props.items.map((expense) => <ExpenseItem kichwa={expense.title} bei={expense.amount} tarehe={expense.date} />)}
+
             </Card>
 
         </div>
