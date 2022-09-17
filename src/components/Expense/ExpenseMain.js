@@ -26,16 +26,16 @@ const ExpenseMain = (props) => {
     })
 
     // if filteredMwaka is equal to 0 then return the paragraph tag, //
-    // else which is denoted by : returns the map method expression //
+    // && means the statement will be true only if all operands are true //
 
     return (
         <div>
 
             <Card className='expenses'>
                 <ExpensesFilter selected={filteredYear} onSaveSelectChangeHandler={saveSelectChangeHandler} />
-                {filteredMwaka.length == 0 ? (<p>No expenses found here!</p>) : (
-                    filteredMwaka.map(expense => <ExpenseItem key={expense.id} kichwa={expense.title} bei={expense.amount} tarehe={expense.date} />)
-                )}
+                {filteredMwaka.length === 0 && <p>No expenses found here!</p>}
+                {filteredMwaka.length > 0 &&
+                    filteredMwaka.map(expense => <ExpenseItem key={expense.id} kichwa={expense.title} bei={expense.amount} tarehe={expense.date} />)}
 
 
             </Card>
