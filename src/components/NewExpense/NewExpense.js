@@ -20,12 +20,17 @@ const NewExpense = (props) => {
     }
     // function to show the form //
 
+    // function to cancel the form //
+    const stopEditingHandler = () => {
+        setIsEditing(false);
+    }
+
     // (!)isEditing means that the button will show if isEditing will be true //
     // because initially isEditing is set to false by useState //
     return (
         <div className="new-expense">
             {!isEditing && <button onClick={startEditingHandler}>Add New Expense</button>}
-            {isEditing && <ExpenseForm onSaveExpenseData={saveExpenseDataHandler} />}
+            {isEditing && <ExpenseForm onSaveExpenseData={saveExpenseDataHandler} onStopEditingHandler={stopEditingHandler}/>}
             
         </div>
     )
