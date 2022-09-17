@@ -8,7 +8,7 @@ const ExpenseList = (props) => {
     // conditional statement //
 
     if (props.items.length === 0) {
-        return <h2 className='expense-list__fallback'>No expenses found here!</h2>
+        return <h2 className='expenses-list__fallback'>No expenses found here!</h2>
     }
 
     // conditional statement //

@@ -14,14 +14,17 @@ const ExpenseItem = (props) => { // the word props can be set to any other name 
     }
 
     return (
-        <Card className='expense-item'>
-            <ExpenseDate tarehe={props.tarehe} />
-            <div className='expense-item__description'>
-                <h2>{title}</h2>
-                <div className='expense-item__price'>${props.bei}</div>
-            </div>
-            <button onClick={clickHandler}>Change Title!!</button>
-        </Card>
+        <li>
+            <Card className='expense-item'>
+                <ExpenseDate tarehe={props.tarehe} />
+                <div className='expense-item__description'>
+                    <h2>{title}</h2>
+                    <div className='expense-item__price'>${props.bei}</div>
+                </div>
+                <button onClick={clickHandler}>Change Title!!</button>
+            </Card>
+        </li>
+        
     );
 }
 
