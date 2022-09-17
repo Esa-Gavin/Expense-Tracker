@@ -13,6 +13,7 @@ const NewExpense = (props) => {
             id: Math.random().toString()
         }
         props.onAddExpense(expenseData);
+        setIsEditing(false); // this is done so that the form should not show once you save an expense //
     }
     // function to show the form //
     const startEditingHandler = () => {
