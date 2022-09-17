@@ -15,18 +15,22 @@ const ExpenseMain = (props) => {
     // represents a function to update the current state //
     // keys are used to give an identity to the elements in a list //
 
-    const [filteredYear, setFilteredYear] = useState('2020');
+    const [filteredYear, setFilteredYear] = useState('2022');
 
     const saveSelectChangeHandler = (enteredSelectData) => {
         setFilteredYear(enteredSelectData);
     }
+
+    const filteredMwaka = props.items.filter(expense => {
+        return expense.date.getFullYear().toString() === filteredYear;
+    })
 
     return (
         <div>
 
             <Card className='expenses'>
                 <ExpensesFilter selected={filteredYear} onSaveSelectChangeHandler={saveSelectChangeHandler} />
-                {props.items.map(expense => <ExpenseItem key={expense.id} kichwa={expense.title} bei={expense.amount} tarehe={expense.date} />)}
+                {filteredMwaka.map(expense => <ExpenseItem key={expense.id} kichwa={expense.title} bei={expense.amount} tarehe={expense.date} />)}
 
             </Card>
 
