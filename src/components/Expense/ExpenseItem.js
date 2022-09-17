@@ -5,14 +5,14 @@ import ExpenseDate from './ExpenseDate';
 import Card from '../UI/Card';
 
 const ExpenseItem = (props) => { // the word props can be set to any other name //
-   
+
     const [title, setTitle] = useState(props.kichwa);
-    
+
     const clickHandler = () => { // it is a common convention to name event handlers 'Handlers' //
         setTitle('Kiroshi')
         console.log("Updated!!!")
     }
-    
+
     return (
         <Card className='expense-item'>
             <ExpenseDate tarehe={props.tarehe} />

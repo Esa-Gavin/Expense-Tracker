@@ -25,12 +25,18 @@ const ExpenseMain = (props) => {
         return expense.date.getFullYear().toString() === filteredYear;
     })
 
+    // if filteredMwaka is equal to 0 then return the paragraph tag, //
+    // else which is denoted by : returns the map method expression //
+
     return (
         <div>
 
             <Card className='expenses'>
                 <ExpensesFilter selected={filteredYear} onSaveSelectChangeHandler={saveSelectChangeHandler} />
-                {filteredMwaka.map(expense => <ExpenseItem key={expense.id} kichwa={expense.title} bei={expense.amount} tarehe={expense.date} />)}
+                {filteredMwaka.length == 0 ? (<p>No expenses found here!</p>) : (
+                    filteredMwaka.map(expense => <ExpenseItem key={expense.id} kichwa={expense.title} bei={expense.amount} tarehe={expense.date} />)
+                )}
+
 
             </Card>
 
