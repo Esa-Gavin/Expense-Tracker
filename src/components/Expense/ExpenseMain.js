@@ -13,6 +13,7 @@ const ExpenseMain = (props) => {
     // the parameter enteredSelectData is custom and can be named anything //
     // filteredYear represents the current state while setFilteredYear, //
     // represents a function to update the current state //
+    // keys are used to give an identity to the elements in a list //
 
     const [filteredYear, setFilteredYear] = useState('2020');
 
@@ -25,7 +26,7 @@ const ExpenseMain = (props) => {
 
             <Card className='expenses'>
                 <ExpensesFilter selected={filteredYear} onSaveSelectChangeHandler={saveSelectChangeHandler} />
-                {props.items.map(expense => <ExpenseItem kichwa={expense.title} bei={expense.amount} tarehe={expense.date} />)}
+                {props.items.map(expense => <ExpenseItem key={expense.id} kichwa={expense.title} bei={expense.amount} tarehe={expense.date} />)}
 
             </Card>
 
