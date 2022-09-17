@@ -4,6 +4,7 @@ import './ExpenseMain.css';
 import ExpenseItem from './ExpenseItem';
 import Card from '../UI/Card';
 import ExpensesFilter from './ExpensesFilter';
+import ExpenseList from './ExpenseList';
 
 
 const ExpenseMain = (props) => {
@@ -20,7 +21,7 @@ const ExpenseMain = (props) => {
     const saveSelectChangeHandler = (enteredSelectData) => {
         setFilteredYear(enteredSelectData);
     }
-
+    // here 'items' represents expenses which is found in app.js //
     const filteredMwaka = props.items.filter(expense => {
         return expense.date.getFullYear().toString() === filteredYear;
     })
@@ -32,7 +33,7 @@ const ExpenseMain = (props) => {
 
             <Card className='expenses'>
                 <ExpensesFilter selected={filteredYear} onSaveSelectChangeHandler={saveSelectChangeHandler} />
-                {expensesContent}
+                <ExpenseList items={filteredMwaka}/>
             </Card>
 
         </div>
