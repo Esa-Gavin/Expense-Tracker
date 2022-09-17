@@ -25,13 +25,7 @@ const ExpenseMain = (props) => {
         return expense.date.getFullYear().toString() === filteredYear;
     })
 
-    // conditional statement //
-    let expensesContent = <p>No expenses found here!</p>
-
-    if (filteredMwaka.length > 0) {
-        expensesContent = filteredMwaka.map(expense => <ExpenseItem key={expense.id} kichwa={expense.title} bei={expense.amount} tarehe={expense.date} />)
-    }
-    // conditional statement //
+    
 
     return (
         <div>
