@@ -25,19 +25,20 @@ const ExpenseMain = (props) => {
         return expense.date.getFullYear().toString() === filteredYear;
     })
 
-    // if filteredMwaka is equal to 0 then return the paragraph tag, //
-    // && means the statement will be true only if all operands are true //
+    // conditional statement //
+    let expensesContent = <p>No expenses found here!</p>
+
+    if (filteredMwaka.length > 0) {
+        expensesContent = filteredMwaka.map(expense => <ExpenseItem key={expense.id} kichwa={expense.title} bei={expense.amount} tarehe={expense.date} />)
+    }
+    // conditional statement //
 
     return (
         <div>
 
             <Card className='expenses'>
                 <ExpensesFilter selected={filteredYear} onSaveSelectChangeHandler={saveSelectChangeHandler} />
-                {filteredMwaka.length === 0 && <p>No expenses found here!</p>}
-                {filteredMwaka.length > 0 &&
-                    filteredMwaka.map(expense => <ExpenseItem key={expense.id} kichwa={expense.title} bei={expense.amount} tarehe={expense.date} />)}
-
-
+                {expensesContent}
             </Card>
 
         </div>
