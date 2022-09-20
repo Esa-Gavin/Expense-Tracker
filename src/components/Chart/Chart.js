@@ -4,6 +4,11 @@ import ChatBar from './ChartBar';
 import './Chart.css';
 
 const Chart = (props) => {
+
+    // (dataPoint => dataPoint.value)we are transforming dataPoint object to just a number //
+    const dataPointValues = props.dataPoints.map(dataPoint => dataPoint.value) 
+    const totalMaximum = Math.max(...dataPointValues);
+
     return (
         <div className='chart'>
             {props.dataPoints.map(dataPoint =>
