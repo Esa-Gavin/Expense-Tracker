@@ -33,7 +33,7 @@ const ExpenseMain = (props) => {
 
             <Card className='expenses'>
                 <ExpensesFilter selected={filteredYear} onSaveSelectChangeHandler={saveSelectChangeHandler} />
-                <ExpensesChart />
+                <ExpensesChart expenses={filteredMwaka}/>
                 <ExpenseList items={filteredMwaka} />
             </Card>
 
