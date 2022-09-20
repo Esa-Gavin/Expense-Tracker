@@ -4,6 +4,7 @@ import './ExpenseMain.css';
 import Card from '../UI/Card';
 import ExpensesFilter from './ExpensesFilter';
 import ExpenseList from './ExpenseList';
+import ExpensesChart from './ExpensesChart';
 
 
 const ExpenseMain = (props) => {
@@ -32,7 +33,8 @@ const ExpenseMain = (props) => {
 
             <Card className='expenses'>
                 <ExpensesFilter selected={filteredYear} onSaveSelectChangeHandler={saveSelectChangeHandler} />
-                <ExpenseList items={filteredMwaka}/>
+                <ExpensesChart />
+                <ExpenseList items={filteredMwaka} />
             </Card>
 
         </div>
