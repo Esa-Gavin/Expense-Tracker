@@ -8,7 +8,7 @@ const ChatBar = (props) => {
 
     //math.round is for rounding to the next integer //
     if (props.max > 0) {
-        barFillHeight = Math.round((props.value / props.maxValue) * 100) + '%'
+        barFillHeight = Math.round((props.value / props.maxValue) * 100) + '%';
     }
 
     return (
@@ -16,7 +16,7 @@ const ChatBar = (props) => {
             <div className='chart-bar__inner'>
                 <div className='chart-bar__fill' style={{height: barFillHeight}}></div>
             </div>
-            <div className='chart-bar__label'></div>
+            <div className='chart-bar__label'>{props.label}</div>
         </div>
 
     )
