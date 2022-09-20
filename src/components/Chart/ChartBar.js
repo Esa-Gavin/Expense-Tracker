@@ -7,7 +7,7 @@ const ChatBar = (props) => {
     let barFillHeight = '0%';
 
     //math.round is for rounding to the next integer //
-    if (props.max > 0) {
+    if (props.maxValue > 0) {
         barFillHeight = Math.round((props.value / props.maxValue) * 100) + '%';
     }
 
